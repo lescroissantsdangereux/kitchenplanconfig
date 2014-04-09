@@ -3,11 +3,77 @@ groups:
 recipes:
     mac_os_x:
         - osxdefaults::set_computer_name
+        - osxdefaults::automatically_illuminate_built-in_macbook_keyboard_in_low_light
+        - osxdefaults::avoid_creating_ds_store_files_on_network_volumes
+        - osxdefaults::disable_auto-correct
+        - osxdefaults::disable_disk_image_verification
 attributes:
     osxdefaults:
-        computername: MyComputerName
+        computername: jm-laptop
     homebrewalt:
         apps:
-            - git-extras
+            - coreutils
+            - moreutils
+            - findutils
+            - bash
+            - ack
+            - pv
+            - git
+            - htop-osx
+            - lynx
+            - ngrep
+            - node
+            - rename
+            - tree
+            - watch
+            - webkit2png
+            - wget --enable-iri
+            - vim --override-system-vi
+            - imagemagick --with-webp
         cask_apps:
-            - sourcetree
+            - alfred
+            - bettertouchtool
+            - brackets
+            - deluge
+            - dropbox
+            - eclipse-ide
+            - flip4mac
+            - free-ruler
+            - google-chrome
+            - google-japanese-ime
+            - github
+            - growl-fork
+            - handbrake
+            - haskell-platform
+            - ichm
+            - imagealpha
+            - imageoptim
+            - iterm2
+            - java
+            - jdownloader
+            - jsonlook
+            - launchrocket
+            - libreoffice
+            - little-snitch
+            - macvim
+            - max
+            - miro-video-converter
+            - mplayerx
+            - perian
+            - prey
+            - seashore
+            - secrets
+            - sequel-pro
+            - silverlight
+            - skype
+            - sopcast
+            - the-unarchiver
+            - tinkertool
+            - truecrypt
+            - ukelele
+            - utorrent
+            - vlc
+            - wireshark
+            - xee
+            - xquartz
+            - xmind
