@@ -1,0 +1,8 @@
+recipes:
+    mac_os_x:
+        - osxdefaults::set_computer_name
+        - osxdefaults::finder_set_preferred_view_style
+attributes:
+    osxdefaults:
+        computername: thedesktop
+        preferred_view_style: icnv

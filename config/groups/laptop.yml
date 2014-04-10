@@ -1,0 +1,16 @@
+groups:
+    - desktop
+recipes:
+    mac_os_x:
+        - osxdefaults::automatically_illuminate_built-in_macbook_keyboard_in_low_light
+        - osxdefaults::turn_off_keyboard_illumination_when_computer_is_not_used_for_5_minutes
+        - osxdefaults::check_for_software_updates_daily
+        - osxdefaults::finder_show_all_files
+        - osxdefaults::restart_automatically_if_the_computer_freezes
+attributes:
+    osxdefaults:
+        computername: thelaptop
+        preferred_view_style: Nlsv
+    homebrewalt:
+        cask_apps:
+            - prey

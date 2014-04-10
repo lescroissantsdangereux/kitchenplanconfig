@@ -1,15 +1,45 @@
 groups:
-    - groupa
+    - laptop
 recipes:
     mac_os_x:
-        - osxdefaults::set_computer_name
         - osxdefaults::automatically_illuminate_built-in_macbook_keyboard_in_low_light
         - osxdefaults::avoid_creating_ds_store_files_on_network_volumes
         - osxdefaults::disable_auto-correct
         - osxdefaults::disable_disk_image_verification
+        - osxdefaults::disable_natural_scrolling
+        - osxdefaults::disable_press-and-hold_for_keys_in_favor_of_key_repeat
+        - osxdefaults::do_not_group_windows_by_application_in_mission_control
+        - osxdefaults::do_not_show_dashboard_as_a_space
+        - osxdefaults::dock_do_not_animate_opening_applications_from_the_dock
+        - osxdefaults::dock_enable_highlight_hover_effect_for_the_grid_view_of_a_stack
+        - osxdefaults::dock_make_dock_icons_of_hidden_applications_translucent
+        - osxdefaults::dock_minimize_to_application
+        - osxdefaults::dock_show_indicator_lights_for_open_applications_in_the_dock
+        - osxdefaults::enable_full_keyboard_access_for_all_controls
+        - osxdefaults::enable_safari_debug_menu
+        - osxdefaults::enable_subpixel_font_rendering_on_non-apple_lcds
+        - osxdefaults::expand_save_panel_by_default
+        - osxdefaults::finder_allow_text_selection_in_quick_look
+        - osxdefaults::finder_automatically_open_a_new_finder_window_when_a_volume_is_mounted
+        - osxdefaults::finder_disable_the_warning_when_changing_a_file_extension
+        - osxdefaults::finder_display_full_path
+        - osxdefaults::finder_new_finder_windows_shows_homefolder
+        - osxdefaults::finder_search_the_current_folder_by_default
+        - osxdefaults::finder_show_file_extensions
+        - osxdefaults::increase_window_resize_speed_for_cocoa_applications
+        - osxdefaults::finder_unhide_home
+        - osxdefaults::make_safari_search_banners_default_to_contains_instead_of_starts_with
+        - osxdefaults::prevent_time_machine_from_prompting_to_use_new_hard_drives_as_backup_volume
+        - osxdefaults::save_screenshots_in_png_format
+        - osxdefaults::save_screenshots_to_the_desktop
+        - osxdefaults::save_to_disk_not_to_iCloud_by_default
+        - osxdefaults::set_a_blazingly_fast_keyboard_repeat_rate
+        - osxdefaults::tap_to_click
+        - osxdefaults::set_terminal_profile
+        - osxdefaults::terminal_preferences
 attributes:
-    osxdefaults:
-        computername: jm-laptop
+    terminal:
+        profile: Solarized-Dark-ansi
     homebrewalt:
         apps:
             - coreutils
@@ -27,6 +57,7 @@ attributes:
             - tree
             - watch
             - webkit2png
+            - xmlstarlet
             - wget --enable-iri
             - vim --override-system-vi
             - imagemagick --with-webp
@@ -52,6 +83,7 @@ attributes:
             - java
             - jdownloader
             - jsonlook
+            - lastpass-universal
             - launchrocket
             - libreoffice
             - little-snitch
@@ -67,6 +99,7 @@ attributes:
             - silverlight
             - skype
             - sopcast
+            - superduper
             - the-unarchiver
             - tinkertool
             - truecrypt
