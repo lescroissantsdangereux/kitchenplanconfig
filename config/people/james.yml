@@ -2,6 +2,7 @@ groups:
     - laptop
 recipes:
     mac_os_x:
+        - dotfiles::inputrc
         - osxdefaults::automatically_illuminate_built-in_macbook_keyboard_in_low_light
         - osxdefaults::avoid_creating_ds_store_files_on_network_volumes
         - osxdefaults::disable_auto-correct
