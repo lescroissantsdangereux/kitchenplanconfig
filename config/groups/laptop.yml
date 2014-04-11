@@ -7,6 +7,7 @@ recipes:
         - osxdefaults::check_for_software_updates_daily
         - osxdefaults::finder_show_all_files
         - osxdefaults::restart_automatically_if_the_computer_freezes
+        - osxdefaults::disable_gatekeeper
 attributes:
     osxdefaults:
         computername: thelaptop

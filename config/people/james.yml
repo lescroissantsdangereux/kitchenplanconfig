@@ -3,12 +3,15 @@ groups:
 recipes:
     mac_os_x:
         - dotfiles::inputrc
+        - osxdefaults::add_a_context_menu_item_for_showing_the_web_inspector_in_web_views
         - osxdefaults::automatically_illuminate_built-in_macbook_keyboard_in_low_light
+        - osxdefaults::automatically_quit_printer_app_once_the_print_jobs_complete
         - osxdefaults::avoid_creating_ds_store_files_on_network_volumes
         - osxdefaults::disable_auto-correct
         - osxdefaults::disable_disk_image_verification
         - osxdefaults::disable_natural_scrolling
         - osxdefaults::disable_press-and-hold_for_keys_in_favor_of_key_repeat
+        - osxdefaults::disable_resume_system-wide
         - osxdefaults::do_not_group_windows_by_application_in_mission_control
         - osxdefaults::do_not_show_dashboard_as_a_space
         - osxdefaults::dock_do_not_animate_opening_applications_from_the_dock
@@ -19,6 +22,7 @@ recipes:
         - osxdefaults::enable_full_keyboard_access_for_all_controls
         - osxdefaults::enable_safari_debug_menu
         - osxdefaults::enable_subpixel_font_rendering_on_non-apple_lcds
+        - osxdefaults::expand_print_panel_by_default
         - osxdefaults::expand_save_panel_by_default
         - osxdefaults::finder_allow_text_selection_in_quick_look
         - osxdefaults::finder_automatically_open_a_new_finder_window_when_a_volume_is_mounted
@@ -38,7 +42,29 @@ recipes:
         - osxdefaults::tap_to_click
         - osxdefaults::set_terminal_profile
         - osxdefaults::terminal_preferences
+        # my own recipes, adapted from mathiasbynens' .osx file from his dotfiles repo (like the rest of the cookbook...)
+        - osxdefaults::activity_monitor_show_all_processes
+        - osxdefaults::activity_monitor_visualize_cpu_usage_in_dock_icon
+        - osxdefaults::always_show_scrollbars
+        - osxdefaults::disable_are_you_sure_you_want_to_open_application_dialog
+        - osxdefaults::disable_auto-corrent
+        - osxdefaults::disable_automatic_termination_of_inactive_apps
+        - osxdefaults::disable_smart_dashes
+        - osxdefaults::disable_smart_quotes
+        - osxdefaults::disable_dashboard
+        - osxdefaults::enable_metric_units
+        - osxdefaults::finder_show_path_bar
+        - osxdefaults::finder_show_status_bar
+        - osxdefaults::finder_show_user_library_folder
+        - osxdefaults::follow_the_keyboard_focus_while_zoomed_in
+        - osxdefaults::set_timezone
+        - osxdefaults::terminal_only_use_utf8
+        - osxdefaults::textedit_open_and_save_files_as_utf8
+        - osxdefaults::use_plain_text_mode_for_new_textedit_documents
+        - osxdefaults::use_scroll_gesture_with_the_ctrl_modifier_key_to_zoom
 attributes:
+    osxdefaults:
+        timezone: Europe/London
     terminal:
         profile: Solarized-Dark-ansi
     homebrewalt:
@@ -51,6 +77,7 @@ attributes:
             - pv
             - git
             - htop-osx
+            - javarepl
             - lynx
             - ngrep
             - node
