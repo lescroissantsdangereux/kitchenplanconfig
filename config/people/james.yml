@@ -3,6 +3,8 @@ groups:
 recipes:
     mac_os_x:
         - dotfiles::inputrc
+        - dotfiles::bash_it
+        - dotfiles::vim
         - osxdefaults::add_a_context_menu_item_for_showing_the_web_inspector_in_web_views
         - osxdefaults::automatically_illuminate_built-in_macbook_keyboard_in_low_light
         - osxdefaults::automatically_quit_printer_app_once_the_print_jobs_complete
@@ -28,6 +30,7 @@ recipes:
         - osxdefaults::finder_automatically_open_a_new_finder_window_when_a_volume_is_mounted
         - osxdefaults::finder_disable_the_warning_when_changing_a_file_extension
         - osxdefaults::finder_display_full_path
+        - osxdefaults::finder_enable_snap-to-grid
         - osxdefaults::finder_new_finder_windows_shows_homefolder
         - osxdefaults::finder_search_the_current_folder_by_default
         - osxdefaults::finder_show_file_extensions
@@ -63,6 +66,35 @@ recipes:
         - osxdefaults::use_plain_text_mode_for_new_textedit_documents
         - osxdefaults::use_scroll_gesture_with_the_ctrl_modifier_key_to_zoom
 attributes:
+    dotfiles:
+        vimusers:
+            - root
+            - james
+        vim:
+            bundle:
+                - sleuth: git://github.com/tpope/vim-sleuth.git
+                - sensible: git://github.com/tpope/vim-sensible.git
+                - gitgutter: git://github.com/airblade/vim-gitgutter.git
+                - airline: https://github.com/bling/vim-airline
+                - syntastic: git://github.com/scrooloose/syntastic.git
+                - nerdtree: https://github.com/scrooloose/nerdtree.git
+                - vim-css-color: https://github.com/ap/vim-css-color
+                - gundo: https://github.com/sjl/gundo.vim
+                - ctrlp: https://github.com/kien/ctrlp.vim
+                - snipmate: https://github.com/garbas/vim-snipmate
+    bash_it:
+        theme: minimal
+        enabled_plugins:
+          completion:
+            - defaults
+            - bash-it
+            - git
+            - brew
+            - ssh
+          plugins:
+            - base
+            - extract
+            - ssh
     osxdefaults:
         timezone: Europe/London
     terminal:
@@ -73,6 +105,7 @@ attributes:
             - moreutils
             - findutils
             - bash
+            - bash-completion
             - ack
             - pv
             - git
@@ -133,6 +166,7 @@ attributes:
             - truecrypt
             - ukelele
             - utorrent
+            - virtualbox
             - vlc
             - wireshark
             - xee
