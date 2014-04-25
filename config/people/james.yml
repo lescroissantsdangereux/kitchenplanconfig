@@ -30,7 +30,6 @@ recipes:
         - osxdefaults::finder_automatically_open_a_new_finder_window_when_a_volume_is_mounted
         - osxdefaults::finder_disable_the_warning_when_changing_a_file_extension
         - osxdefaults::finder_display_full_path
-        - osxdefaults::finder_enable_snap-to-grid
         - osxdefaults::finder_new_finder_windows_shows_homefolder
         - osxdefaults::finder_search_the_current_folder_by_default
         - osxdefaults::finder_show_file_extensions
@@ -56,6 +55,7 @@ recipes:
         - osxdefaults::disable_smart_quotes
         - osxdefaults::disable_dashboard
         - osxdefaults::enable_metric_units
+        - osxdefaults::finder_enable_snap-to-grid
         - osxdefaults::finder_show_path_bar
         - osxdefaults::finder_show_status_bar
         - osxdefaults::finder_show_user_library_folder
@@ -119,9 +119,9 @@ attributes:
             - watch
             - webkit2png
             - xmlstarlet
-            - wget --enable-iri
-            - vim --override-system-vi
-            - imagemagick --with-webp
+            - wget
+            - vim
+            - imagemagick 
         cask_apps:
             - alfred
             - bettertouchtool
